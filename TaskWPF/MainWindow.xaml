@@ -1,0 +1,71 @@
+﻿<Window x:Class="TaskWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Foreground="Gray" FontSize="32" Margin="20 25 10 0">Customer Search</TextBlock>
+                <TextBlock Foreground="White" FontSize="32" Margin="20 25 10 0">Edit Customer</TextBlock>
+            </StackPanel>
+            <Grid Background="#424242" Margin="10 0 10 10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Border BorderBrush="White" BorderThickness="2" Margin="5" CornerRadius="3">
+                        <Button Content="Save data" Foreground="White" Background="DarkGray" Height="30" Width="100" HorizontalContentAlignment="Left" Padding="8 0 0 0"></Button>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="2" Margin="5" CornerRadius="3">
+                        <Button Content="Close" Foreground="White" Background="DarkGray" Height="30" Width="70" HorizontalContentAlignment="Left" Padding="8 0 0 0"></Button>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Grid.Row="2" Margin="10 0 10 10" Background="#424242">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Foreground="White" Margin="9 20 9 9" FontSize="14">First Name:</TextBlock>
+                <TextBlock Foreground="White" Margin="9" FontSize="14">Last Name:</TextBlock>
+                <TextBlock Foreground="White" Margin="9" FontSize="14">Company Name:</TextBlock>
+                <TextBlock Foreground="White" Margin="9" FontSize="14">Devision:</TextBlock>
+                <TextBlock Foreground="Black" Margin="9" FontSize="14">Phone Numbers</TextBlock>
+                <TextBlock Foreground="White" Margin="9" FontSize="14">Phone:</TextBlock>
+                <TextBlock Foreground="White" Margin="9" FontSize="14">Fax:</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Border BorderBrush="White" BorderThickness="1" Margin="3 12 3 3" CornerRadius="3">
+                    <TextBox Height="30" Background="#343638"></TextBox>
+                </Border>
+                <Border BorderBrush="White" BorderThickness="1" Margin="3" CornerRadius="3">
+                    <TextBox Height="30" Background="#343638"></TextBox>
+                </Border>
+                <Border BorderBrush="White" BorderThickness="1" Margin="3" CornerRadius="3">
+                    <TextBox Height="30" Background="#343638" ></TextBox>
+                </Border>
+                <Border BorderBrush="White" BorderThickness="1" Margin="3" CornerRadius="3">
+                    <TextBox Height="30" Background="#343638"></TextBox>
+                </Border>
+                <Border BorderBrush="White" BorderThickness="1" Margin="4 30 4 4" CornerRadius="3">
+                    <TextBox Height="30" Background="#343638"></TextBox>
+                </Border>
+                <Border BorderBrush="White" BorderThickness="1" Margin="4" CornerRadius="3">
+                    <TextBox Height="30" Background="#343638"></TextBox>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <TextBlock Foreground="White" Margin="7" FontSize="14">Birthday:</TextBlock>
+                <Calendar Margin="7"></Calendar>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
